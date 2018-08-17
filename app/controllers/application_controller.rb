@@ -1,4 +1,3 @@
-
 class ApplicationController < Sinatra::Base
   
   configure do
@@ -7,11 +6,15 @@ class ApplicationController < Sinatra::Base
   end 
   
   get '/' do
+    erb :index
+  end
+  
+get '/front_page' do
     erb :front_page
   end
   
 
-post  "/begin" do 
+post "/begin" do 
     erb :begin
 end
 
